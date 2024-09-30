@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@font-face {
+  font-family: "ghume";
+  src: url(/assets/fonts/airbnb-cereal-font/AirbnbCereal_W_Bd.otf)
+      format("opentype"),
+    url(/assets/fonts/airbnb-cereal-font/AirbnbCereal_W_Bk.otf)
+      format("opentype"),
+    url(/assets/fonts/airbnb-cereal-font/AirbnbCereal_W_Blk.otf)
+      format("opentype"),
+    url(/assets/fonts/airbnb-cereal-font/AirbnbCereal_W_Md.otf)
+      format("opentype"),
+    url(/assets/fonts/airbnb-cereal-font/AirbnbCereal_W_Lt.otf)
+      format("opentype"),
+    url(/assets/fonts/airbnb-cereal-font/AirbnbCereal_W_XBd.otf)
+      format("opentype");
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "ghume", Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
